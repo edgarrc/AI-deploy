@@ -13,11 +13,11 @@ RUN apt-get update && apt-get install -y \
 ENV ACCEPT_EULA=Y  
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list && \
-	apt-get update && apt-get install --reinstall -y \
-	gcc \
-	build-essential \
+    apt-get update && apt-get install --reinstall -y \
+    gcc \
+    build-essential \
     unixodbc \ 
-	unixodbc-dev \
+    unixodbc-dev \
     msodbcsql17 && \
     cp /etc/odbc.ini /etc/odbcinst.ini /usr/local/etc/  && \
     apt-get clean && apt-get --yes --quiet autoremove --purge && \
