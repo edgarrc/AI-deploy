@@ -9,7 +9,7 @@ Parameters:
 | PORT          | tcp port used by pyramid service |
 | APPNAME       | entrypoint/cmd run that will be started |
 
-Example:
+Example, running the sampleapp:
 
 ```
 git clone https://github.com/edgarrc/AI-deploy.git
