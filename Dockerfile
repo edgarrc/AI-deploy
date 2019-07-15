@@ -32,7 +32,8 @@ RUN pip install --upgrade pip && pip3 install --no-cache-dir \
   nltk \
   pypyodbc \
   pyramid 
-  
+
+RUN mkdir /app
 WORKDIR /app
 EXPOSE ${PORT}
 CMD ["sh", "-c", "/usr/local/bin/python ${APPNAME} ${PORT}"]
