@@ -4,11 +4,13 @@
 
 Parameters:
 
-| Parameter     | Value        |
-| ------------- |-------------:|
-| PORT          | tcp port used by pyramid service |
-| APPNAME       | entrypoint/cmd run that will be started |
-| -v            | it is a docker parameter, but just to remind you that you have to map you app folder that contains your APPNAME |
+| Parameter       | Value        |
+| ----------------|-------------:|
+| PORT            | tcp port used by pyramid service |
+| APPNAME         | entrypoint/cmd run that will be started |
+| APPFOLDER       | You have to map you app folder that contains your APPNAME |
+
+docker run -e PORT=<PORT> -e APPNAME=<APPNAME> -v <APPFOLDER>:/app edgarrc/ai-deploy
 
 Example, running the sampleapp:
 
