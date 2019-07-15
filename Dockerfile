@@ -35,5 +35,4 @@ RUN pip install --upgrade pip && pip3 install --no-cache-dir \
   
 WORKDIR /app
 EXPOSE ${PORT}
-ENTRYPOINT ["/usr/local/bin/python"]
-CMD [${APPNAME}]
+CMD /usr/local/bin/python ${APPNAME}
