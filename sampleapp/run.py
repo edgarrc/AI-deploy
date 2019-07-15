@@ -4,10 +4,10 @@ from pyramid.response import Response
 
 if __name__ == '__main__':
     
-    print("Iniciando servico")
+    print("Iniciando servico em " +  str(sys.argv[0]))
     
     config = Configurator()
 	
     app = config.make_wsgi_app()
-    server = make_server('0.0.0.0', 8080, app)
-    server.serve_forever()	
+    server = make_server('0.0.0.0', sys.argv[0], app)
+    server.serve_forever()		
