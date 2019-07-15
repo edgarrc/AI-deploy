@@ -33,9 +33,7 @@ RUN pip install --upgrade pip && pip3 install --no-cache-dir \
   pypyodbc \
   pyramid 
   
-RUN mkdir /app
-COPY . /app/
 WORKDIR /app
-EXPOSE 8080
+EXPOSE ${PORT}
 ENTRYPOINT ["/usr/local/bin/python"]
-CMD ["run.py"]
+CMD [${APPNAME}]
