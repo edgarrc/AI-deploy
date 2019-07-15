@@ -9,7 +9,7 @@ docker run -e PORT=<PORT> -e APPNAME=<APPNAME> -v <APPFOLDER>:/app edgarrc/ai-de
 Parameters:
 
 | Parameter       | Value        |
-| ----------------|-------------:|
+| ----------------|:-------------|
 | PORT            | tcp port used by pyramid service |
 | APPNAME         | entrypoint/cmd run that will be started |
 | APPFOLDER       | You have to map you app folder that contains your APPNAME |
