@@ -1,15 +1,16 @@
 # AI-deploy
 
-## USE
+## using
 
 Parameters:
 
-```
-PORT: tcp port used by pyramid service
-APPNAME: entrypoint/cmd run that will be started
-```
+- **PORT**: tcp port used by pyramid service
+- **APPNAME**: entrypoint/cmd run that will be started
+
+Example:
 
 ```
-git clone
-docker run -e PORT=8080 -e APPNAME=run2.py -p 8080:80 -v $(pwd):/app -it edgarrc/ai-deploy
+git clone https://github.com/edgarrc/AI-deploy.git
+cd AI-deploy
+docker run -e PORT=8080 -e APPNAME=run.py -p 8080:80 -v $(pwd)/sampleapp:/app -it edgarrc/ai-deploy
 ```
