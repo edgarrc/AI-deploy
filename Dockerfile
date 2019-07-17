@@ -24,6 +24,7 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 	
 RUN pip install --upgrade pip && pip3 install --no-cache-dir \
+    fastai \
     sklearn \
     scipy \
     scikit-learn \
