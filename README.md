@@ -40,8 +40,15 @@ docker run --name testing -e PORT=8080 -e APPNAME=run.py -p 8080:80 -v $(pwd)/sa
 
 Run as a daemon
 
+
 ```
 sudo docker run -d --name testing -e PORT=80 -e APPNAME=run.py -p 80:80 -v $(pwd)/sampleapp:/app -it edgarrc/ai-deploy 
+```
+
+You can restart it using
+
+```
+sudo docker restart <INSTANCENAME>
 ```
 
 If you don't have docker installed, you can try on [Play With Docker lab](https://labs.play-with-docker.com/)
