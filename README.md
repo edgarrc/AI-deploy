@@ -8,7 +8,7 @@ Interactive:
 docker run --name <INSTANCENAME> -e PORT=<PORT> -e APPNAME=<APPNAME> -v <APPFOLDER>:/app edgarrc/ai-deploy
 ```
 
-Or as a Daemon:
+Or as a daemon:
 
 ```
 docker run -d --name <INSTANCENAME> -e PORT=<PORT> -e APPNAME=<APPNAME> -v <APPFOLDER>:/app edgarrc/ai-deploy
