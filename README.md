@@ -16,10 +16,23 @@ Parameters:
 
 Example, running the sampleapp:
 
+Clone
+
 ```
 git clone https://github.com/edgarrc/AI-deploy.git
 cd AI-deploy
+```
+
+Run interactive
+
+```
 docker run -e PORT=8080 -e APPNAME=run.py -p 8080:80 -v $(pwd)/sampleapp:/app -it edgarrc/ai-deploy
+```
+
+Run as a daemon
+
+```
+sudo docker run -d --name vastiia -e PORT=80 -e APPNAME=run.py -p 80:80 -v $(pwd)/sampleapp:/app -it edgarrc/ai-deploy 
 ```
 
 If you don't have docker installed, you can try on [Play With Docker lab](https://labs.play-with-docker.com/)
