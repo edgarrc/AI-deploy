@@ -2,14 +2,23 @@
 
 ## Using
 
+Interactive:
+
 ```
-docker run -e PORT=<PORT> -e APPNAME=<APPNAME> -v <APPFOLDER>:/app edgarrc/ai-deploy
+docker run --name <INSTANCENAME> -e PORT=<PORT> -e APPNAME=<APPNAME> -v <APPFOLDER>:/app edgarrc/ai-deploy
+```
+
+Or as a Daemon:
+
+```
+docker run -d --name <INSTANCENAME> -e PORT=<PORT> -e APPNAME=<APPNAME> -v <APPFOLDER>:/app edgarrc/ai-deploy
 ```
 
 Parameters:
 
 | Parameter       | Value        |
 | ----------------|:-------------|
+| INSTANCENAME    | The docker instance name, usually the name of your project |
 | PORT            | tcp port used by pyramid service |
 | APPNAME         | entrypoint/cmd run that will be started |
 | APPFOLDER       | You have to map you app folder that contains your APPNAME |
@@ -26,13 +35,13 @@ cd AI-deploy
 Run interactive
 
 ```
-docker run -e PORT=8080 -e APPNAME=run.py -p 8080:80 -v $(pwd)/sampleapp:/app -it edgarrc/ai-deploy
+docker run --name testing -e PORT=8080 -e APPNAME=run.py -p 8080:80 -v $(pwd)/sampleapp:/app -it edgarrc/ai-deploy
 ```
 
 Run as a daemon
 
 ```
-sudo docker run -d --name vastiia -e PORT=80 -e APPNAME=run.py -p 80:80 -v $(pwd)/sampleapp:/app -it edgarrc/ai-deploy 
+sudo docker run -d --name testing -e PORT=80 -e APPNAME=run.py -p 80:80 -v $(pwd)/sampleapp:/app -it edgarrc/ai-deploy 
 ```
 
 If you don't have docker installed, you can try on [Play With Docker lab](https://labs.play-with-docker.com/)
