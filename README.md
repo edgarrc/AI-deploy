@@ -40,12 +40,15 @@ docker run --name testing -e PORT=8080 -e APPNAME=run.py -p 8080:80 -v $(pwd)/sa
 
 Run as a daemon
 
-
 ```
 sudo docker run -d --name testing -e PORT=80 -e APPNAME=run.py -p 80:80 -v $(pwd)/sampleapp:/app -it edgarrc/ai-deploy 
 ```
 
-You can restart it using
+The test url of the sampleapp is:
+
+http://{ip}:{port}/test
+
+You can restart it:
 
 ```
 sudo docker restart <INSTANCENAME>
@@ -63,7 +66,7 @@ cd AI-deploy
 docker image build -t edgarrc/ai-deploy .
 ```
 
-Then you can run with your local generated image instead
+Now you can run with your local generated image instead using:
 
 ```
 docker run -e PORT=8080 -e APPNAME=run.py -p 8080:80 -v $(pwd)/sampleapp:/app -it edgarrc/ai-deploy
