@@ -44,17 +44,28 @@ Run as a daemon
 sudo docker run -d --name testing -e PORT=80 -e APPNAME=run.py -p 80:80 -v $(pwd)/sampleapp:/app -it edgarrc/ai-deploy 
 ```
 
+If you don't have docker installed, you can try on [Play With Docker lab](https://labs.play-with-docker.com/)
+
+## Testing
+
 The test url of the sampleapp is:
 
 http://{ip}:{port}/test
+
+If you are on a linux terminal, you can use elinks
+
+```
+apt-get update && apt-get install elinks -y
+elinks http://172.18.0.22/test
+```
+
+## Admin
 
 You can restart it:
 
 ```
 sudo docker restart <INSTANCENAME>
 ```
-
-If you don't have docker installed, you can try on [Play With Docker lab](https://labs.play-with-docker.com/)
 
 ## Bulding
 
