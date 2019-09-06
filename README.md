@@ -59,6 +59,8 @@ apt-get update && apt-get install elinks -y
 elinks http://172.18.0.22/test
 ```
 
+You should see the "success" word.
+
 ## Admin
 
 You can restart it:
