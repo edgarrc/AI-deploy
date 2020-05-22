@@ -29,6 +29,8 @@ RUN pip install --upgrade pip && pip3 install --no-cache-dir \
     sklearn \
     scipy \
     scikit-learn \
+    flask \	
+    waitress \	    
     pandas \
     gensim \
     nltk \
