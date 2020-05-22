@@ -1,10 +1,12 @@
-from wsgiref.simple_server import make_server
-from pyramid.config import Configurator
-from pyramid.response import Response
 import sys
+from waitress import serve
+from flask import Flask
+from flask import request
+app = Flask(__name__)
 
-def test(request):
-    return Response("success")
+@app.route("/test")
+def test():
+    return "success"
 
 if __name__ == '__main__':
 
@@ -14,14 +16,9 @@ if __name__ == '__main__':
     # Default port to listen
     port = 8080
     if len(sys.argv) > 1:
-        port = int(sys.argv[1])		
-    
-    config = Configurator()
-	
-    config.add_route('test', '/test')
-    config.add_view(test, route_name='test', renderer='json') 	
+        port = int(sys.argv[1])
 	
     print("Starting the service " + str(port))    
-    app = config.make_wsgi_app()
-    server = make_server('0.0.0.0', port, app)
-    server.serve_forever()
+
+    # Waitress
+    serve(app, host="0.0.0.0", port=port)
