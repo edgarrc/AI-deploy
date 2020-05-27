@@ -10,7 +10,7 @@ def test():
 
 if __name__ == '__main__':
 
-    # Print every command line parameter received
+    # Print each command line parameter received
     print("Parameters: " + str(len(sys.argv)) + " values: " + str(sys.argv))	
     
     # Default port to listen
