@@ -4,7 +4,14 @@ LABEL maintener 'Edgar'
 RUN apt-get update && apt-get install -y \
     curl \
     git \
+    gcc \
+    libpq-dev \
     gnupg \ 
+    python3-dev \
+    python3-pip \
+    python3-venv \
+    python3-wheel \
+    git-lfs \
     apt-transport-https \
     wget && \
     apt-get clean && apt-get --yes --quiet autoremove --purge && \
@@ -22,17 +29,22 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     cp /etc/odbc.ini /etc/odbcinst.ini /usr/local/etc/  && \
     apt-get clean && apt-get --yes --quiet autoremove --purge && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-	
+
+#    fastai \
 RUN pip install --upgrade pip && pip3 install --no-cache-dir \
     wheel \
-    fastai \
     sklearn \
+    torch \
+    unidecode \
+    transformers \
+    datasets \    
     scipy \
     scikit-learn \
     flask \	
     waitress \	    
     pandas \
     gensim \
+    shortuuid \
     nltk \
     pypyodbc \
     pyramid 
