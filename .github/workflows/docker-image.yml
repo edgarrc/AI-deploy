@@ -2,8 +2,7 @@
 on:
   workflow_dispatch:    
   push:
-    branches:
-      - master
+    branches: [ "master" ]    
 
 name: ECR publish Github Packages
 
