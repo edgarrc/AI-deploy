@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     python3-venv \
     python3-wheel \
-    git-lfs \
     apt-transport-https \
     wget && \
     apt-get clean && apt-get --yes --quiet autoremove --purge && \
