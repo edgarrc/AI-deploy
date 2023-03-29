@@ -1,21 +1,18 @@
+
 on:
   workflow_dispatch:    
   push:
     branches:
       - master
-      
-name: Docker Image CI - GithubPackes      
+
+name: ECR publish Github Packages
 
 jobs:
-
   deploy:
-
+    name: Deploy
     runs-on: ubuntu-latest
 
     steps:
-    
-    - name: Checkout
-      uses: actions/checkout@v1    
     
     - uses: actions/checkout@v3
     - name: Build the Docker image
