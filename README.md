@@ -69,7 +69,7 @@ You can restart it:
 sudo docker restart <INSTANCENAME>
 ```
 
-## Bulding
+## Building
 
 You don't have to build this image as it is avaialbe on docker hub, but if you whish to build, then run:
 
